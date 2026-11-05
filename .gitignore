@@ -23,3 +23,6 @@ data/private/
 
 # Keep all datasets and source materials out of Git by default
 data/
+data/*.sqlite
+data/*.sqlite-wal
+data/*.sqlite-shm

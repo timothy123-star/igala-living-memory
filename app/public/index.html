@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A consent-first archive for Igala language and oral knowledge." />
+    <title>Igala Living Memory</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <nav><a class="brand" href="#top">IGALA <span>LIVING MEMORY</span></a><span class="nav-note">Consent-first oral knowledge archive</span></nav>
+        <div class="hero-copy" id="top">
+          <p class="eyebrow">Community-held knowledge, responsibly preserved</p>
+          <h1 id="page-title">Oral memory deserves context, consent, and care.</h1>
+          <p class="lede">Igala Living Memory preserves contributed language material with its human provenance intact—so community knowledge is not separated from the people, permissions, and review behind it.</p>
+          <div class="hero-actions"><a class="button button-light" href="#archive">Explore the verified archive</a><a class="text-link" href="#learning">See responsible AI safeguards ↓</a></div>
+        </div>
+        <div class="hero-mark" aria-hidden="true"><span>ILM</span><small>01 / 01</small></div>
+      </section>
+
+      <section class="principles" aria-label="Project principles">
+        <article><span>01</span><h2>Community control</h2><p>Recording, storage, transcription, review, and AI use are separate choices—not assumed permissions.</p></article>
+        <article><span>02</span><h2>Traceable provenance</h2><p>Every displayed record carries contributor attribution, source context, consent state, and reviewer decisions.</p></article>
+        <article><span>03</span><h2>Evidence-bound AI</h2><p>Learning material can only be generated from approved, consented archive evidence. Otherwise, the system refuses.</p></article>
+      </section>
+
+      <section class="archive-section" id="archive" aria-labelledby="archive-title">
+        <div class="section-heading"><p class="eyebrow">Live archive record</p><h2 id="archive-title">Igala Proverbs</h2><p id="archive-status" class="loading">Loading verified archive material…</p></div>
+        <div id="archive-content" hidden>
+          <div class="source-card">
+            <div><p class="label">SOURCE CONTRIBUTION</p><h3 id="source-title"></h3><p id="source-context"></p></div>
+            <div class="source-facts"><div><span>Language</span><strong id="source-language"></strong></div><div><span>Format</span><strong id="source-format"></strong></div><div><span>Duration</span><strong>72-second excerpt</strong></div></div>
+          </div>
+          <div class="privacy-callout"><span aria-hidden="true">◌</span><div><strong>Original audio is private by design.</strong><p id="audio-status"></p></div></div>
+
+          <div class="people-grid" id="people-grid" aria-label="People who shaped this record"></div>
+
+          <div class="consent-provenance">
+            <article><p class="label">CONSENT SCOPE</p><h3 id="consent-status"></h3><div class="permission-list" id="permission-list"></div><p class="microcopy">Consent is versioned and revocable. No permission is inferred from a different purpose.</p></article>
+            <article><p class="label">SOURCE PROVENANCE</p><h3>Preserved with context</h3><dl id="provenance-list"></dl></article>
+          </div>
+
+          <div class="record-intro"><p class="eyebrow">Human-reviewed language record</p><h2>Fourteen proverb lines, kept in relationship</h2><p>The Igala text was supplied and confirmed by the project owner. The English column is aligned with captions from the source video; it is not claimed as an independent translation of the audio.</p></div>
+          <div class="legend"><span><i class="dot verified"></i> Human-verified</span><span><i class="dot"></i> Caption-aligned English interpretation</span></div>
+          <div class="proverb-table" role="region" aria-label="Igala proverbs and English interpretations"><div class="proverb-head"><span>No.</span><span>Human-confirmed Igala transcription</span><span>English interpretation aligned with video captions</span></div><div id="proverb-rows"></div></div>
+          <div class="review-grid" id="review-grid"></div>
+        </div>
+        <div id="archive-error" class="error-card" hidden><h2>Archive unavailable</h2><p>We could not load the live archive record. Please make sure the API is running and try again.</p></div>
+      </section>
+
+      <section class="learning-section" id="learning" aria-labelledby="learning-title">
+        <div><p class="eyebrow">Muse Spark learning material</p><h2 id="learning-title">AI may assist. It may not overreach.</h2><p>Ask for a short learning activity grounded only in approved archive material. Generated content is always labelled as AI-generated—not human-verified.</p></div>
+        <div class="learning-panel"><label for="source-select">Archive contribution</label><select id="source-select" aria-describedby="source-select-note"></select><p id="source-select-note" class="microcopy">Only approved, AI-authorized contributions can generate a lesson.</p><label for="learning-prompt">Learning request</label><textarea id="learning-prompt" rows="4" maxlength="2000">Create a short learner exercise from this source.</textarea><button id="generate-button" class="button" type="button">Generate with Muse Spark <span aria-hidden="true">→</span></button><div id="generation-result" class="generation-result" aria-live="polite"><p>Generation will be checked against approval and consent safeguards before any model request is made.</p></div></div>
+      </section>
+    </main>
+    <footer><span>IGALA LIVING MEMORY</span><p>Built for preservation with community control.</p><span>2026</span></footer>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
